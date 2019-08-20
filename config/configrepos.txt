@@ -1,0 +1,33 @@
+{
+  "spring.cloud.config.server.git.uri": "https://github.com/sguntaka/config-test.git",
+  "spring.cloud.config.server.git.force-pull": "true",
+  "spring.cloud.config.server.git.searchPaths": "/*",
+  "spring.cloud.config.server.git.skipSslValidation": "true",
+  "spring.cloud.config.server.git.timeout": "60",
+  "spring.cloud.config.server.git.delete-untracked-branches": "true",
+  "security.basic.enabled": "false",
+  "spring.profiles.active": "default",
+  "management.security.enabled":"false",
+  "endpoints.health.enabled":"false",
+  "endpoints.info.enabled":"false",
+  "health.config.enabled":"false",
+
+  "spring.cloud.config.server.git.repos": [
+    {
+      "name": "config-test1",
+      "connection": {
+        "uri": "https://github.com/sguntaka/config-test1.git",
+        "force-pull": "true",
+        "searchPaths": "config*,config/*"
+      }
+    },
+    {
+      "name": "config-test2",
+      "connection": {
+        "uri": "https://github.com/sguntaka/config-test2.git",
+        "force-pull": "true",
+        "searchPaths": "config*,config/*"
+      }
+    }
+  ]
+}
